@@ -83,8 +83,11 @@ entradaDeDados.question('Digite o nome do Aluno:', function(nome){
                 //Validação de entrada de números apenas entre 0 até 100
                 }else if(nota1<0 || nota1>100 || nota2<0 || nota2>100 || nota3<0 || nota3>100 || nota4<0 || nota4>100){
                     console.log('ERRO: Somente são possíveis valores entre 0 até 100')
-                }else{
-                    console.log("CALCULAR")
+                
+                //Validação de entrada somente de números
+                //isNaN() -> Permite a validação de números ou letras
+                }else if(isNaN(nota1)|| isNaN(nota2) || isNaN(nota3) || isNaN(nota4)){
+                    console.log('Somente números são permitidos na entrada das notas')
                 }
 
                 })
